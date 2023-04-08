@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Build-and-Deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -25,12 +25,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
-          
-#      - name: Deploy backend to render
- #     - uses: actions/checkout@v3
-  #    - uses: JorgeLNJunior/render-deploy@v1.3.2
-   #     with:
-    #      service_id: ${{ secrets.RENDER_SERVICE_ID }} # required
-     #     api_key: ${{ secrets.RENDER_API_KEY }} # required
-      #    clear_cache: false # Clear build cache. Optional
-       #   wait_deploy: false # Wait until the deploy status is successful. Warning! Free Render services can take +5 minutes to be fully deployed. Optional
