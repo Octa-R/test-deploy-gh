@@ -21,17 +21,12 @@ jobs:
 
       - name: set working dir
         run: |
-          cd ./frontend |
           ls
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: 'npm'
       
       - name: Build frontend
         run: |
+          cd ./frontend
           npm install
           npm run build
 
