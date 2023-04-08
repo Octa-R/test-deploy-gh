@@ -21,7 +21,8 @@ jobs:
 
       - name: set working dir
         run: |
-          cd ${{ github.workspace }}/frontend
+          cd ./frontend |
+          ls
 
       - name: Set up Node
         uses: actions/setup-node@v3
