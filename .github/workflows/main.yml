@@ -1,12 +1,13 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
 on: 
   push:
     branches: [main]
+
 jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
           npm run build
       
       - name: Build Backend
-      - run: |
+        run: |
           cd ${{ github.workspace }}/backend
           npm install
           npm run build
