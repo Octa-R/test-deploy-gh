@@ -19,6 +19,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
 
+      - name: set working dir
+        run: |
+          cd ${{ github.workspace }}/frontend
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -27,7 +31,6 @@ jobs:
       
       - name: Build frontend
         run: |
-          cd ${{ github.workspace }}/frontend
           npm install
           npm run build
 
